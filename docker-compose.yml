@@ -9,6 +9,7 @@ services:
       - WEB_DOCUMENT_ROOT=/app/public
     volumes:
       - .:/app
+      - './docker/supervisor/laravel-worker.conf:/opt/docker/etc/supervisor.d/laravel-worker.conf'
     ports:
       - 8000:80
     depends_on:
